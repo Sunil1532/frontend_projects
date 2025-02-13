@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study MBBS Abroad</title>
+    <meta name="description" content="Study MBBS in top countries like Russia, Kazakhstan, and more. Apply now!">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+</head>
+<body class="bg-gray-100">
+    
+
+    <header class="relative h-screen flex flex-col justify-center items-center text-white text-center">
+        <video autoplay loop muted class="absolute top-0 left-0 w-full h-full object-cover">
+            <source src="assets/Healthcare & Medical Services Video Promo - After Effects Template.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10">
+            <h1 class="text-4xl font-bold">Study MBBS Abroad</h1>
+            <p class="mt-2 text-lg">Apply Now for MBBS in Top Countries</p>
+            <div class="mt-4">
+                <a href="#apply" class="bg-blue-500 px-6 py-3 text-white rounded-lg shadow-lg">Apply Now</a>
+                <a href="#why" class="bg-gray-200 text-blue-600 px-6 py-3 rounded-lg ml-2">Learn More</a>
+            </div>
+        </div>
+    </header>
+    
+
+    <section id="why" class="p-6 text-center">
+        <h2 class="text-2xl font-semibold">Why Study MBBS Abroad?</h2>
+        <p class="text-gray-700 mt-2">Affordable tuition, global exposure, and world-class education.</p>
+    </section>
+
+    <section class="p-6">
+        <h2 class="text-2xl font-semibold text-center">Top Countries</h2>
+        <div class="swiper-container mt-4">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide p-4 bg-white shadow flex flex-col items-center">
+                    <img src="assets/download (3).jpeg" alt="Russia" class="w-10 mb-2">
+                    Russia
+                </div>
+                <div class="swiper-slide p-4 bg-white shadow flex flex-col items-center">
+                    <img src="assets/uzbekisthan.jpeg" alt="Uzbekistan" class="w-10 mb-2">
+                    Uzbekistan
+                </div>
+                <div class="swiper-slide p-4 bg-white shadow flex flex-col items-center">
+                    <img src="assets/kazkasthan.png" alt="Kazakhstan" class="w-10 mb-2">
+                    Kazakhstan
+                </div>
+                <div class="swiper-slide p-4 bg-white shadow flex flex-col items-center">
+                    <img src="assets/phillipines.png" alt="Philippines" class="w-10 mb-2">
+                    Philippines
+                </div>
+                <div class="swiper-slide p-4 bg-white shadow flex flex-col items-center">
+                    <img src="assets/georgia.png" alt="Georgia" class="w-10 mb-2">
+                    Georgia
+                </div>
+                <div class="swiper-slide p-4 bg-white shadow flex flex-col items-center">
+                    <img src="assets/krygsthan.png" alt="Kyrgyzstan" class="w-10 mb-2">
+                    Kyrgyzstan
+                </div>
+                <div class="swiper-slide p-4 bg-white shadow flex flex-col items-center">
+                    <img src="assets/images.jpeg" alt="Egypt" class="w-10 mb-2">
+                    Egypt
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    
+    
+
+    <section class="p-6 text-center">
+        <h2 class="text-2xl font-semibold">Admission Process & Eligibility</h2>
+        <div class="mt-4 space-y-4">
+            <button class="accordion">Step 1: Choose a Country</button>
+            <div class="panel">Research and decide on the country where you want to study MBBS.</div>
+            <button class="accordion">Step 2: Apply</button>
+            <div class="panel">Fill out the application form with accurate details.</div>
+            <button class="accordion">Step 3: Get Admission Letter</button>
+            <div class="panel">Once approved, receive your official admission letter.</div>
+        </div>
+    </section>
+
+    <section id="apply" class="p-6 bg-blue-600 text-white text-center">
+        <h2 class="text-2xl font-semibold">Apply Now</h2>
+        <form id="leadForm" class="mt-4 max-w-md mx-auto">
+            <input type="text" id="name" placeholder="Name" class="w-full p-2 mb-2">
+            <input type="email" id="email" placeholder="Email" class="w-full p-2 mb-2">
+            <input type="text" id="phone" placeholder="Phone" class="w-full p-2 mb-2">
+            <select id="country" class="w-full p-2 mb-2">
+                <option value="">Select Country</option>
+                <option value="Russia">Russia</option>
+                <option value="Uzbekistan">Uzbekistan</option>
+            </select>
+            <button type="submit" class="bg-white text-blue-600 px-4 py-2">Submit</button>
+        </form>
+    </section>
+    
+
+    <a href="https://wa.me/1234567890" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white px-4 py-2 rounded-full shadow-lg">📩 Chat with Us</a>
+    
+    <!-- JavaScript -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            loop: true,
+            autoplay: { delay: 3000 }
+        });
+        
+        document.querySelectorAll(".accordion").forEach(button => {
+            button.addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                panel.style.display = panel.style.display === "block" ? "none" : "block";
+            });
+        });
+        
+        document.getElementById("leadForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("🎉 Application submitted successfully!");
+            this.reset();
+        });
+    </script>
+</body>
+</html>
